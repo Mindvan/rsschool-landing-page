@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="scripts/themeSwitch.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VC Dubbing Studio</title>
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="scripts/slider.js" defer></script>
 </head>
-<body class="home-page">
+<body class="site-page home-page">
     <header class="header">
         <a class="logo" href="index.html"><span class="logo-mark">DS<span>.</span></span><span class="logo-caption">DUBBING<br>STUDIO</span></a>
         <nav class="nav">
@@ -26,7 +28,7 @@
         <section class="hero" id="hero">
             <p class="eyebrow">Голос вашей истории</p>
             <h1 id="hero-title">Ваши истории<br>на разных <span>языках.</span></h1>
-            <div class="sound-wave" role="presentation"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="sound-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div id="hero-info">
                 <p>Студия дубляжа и локализации для сериалов, фильмов, анимации, игр, рекламы.</p>
                 <p>Переводим, подбираем голоса и записываем звук. Смысл в смысл.</p>
@@ -34,27 +36,39 @@
             </div>
         </section>
 
+    <section class="about" id="about">
+        <h2 id="about-title">О студии</h2>
+        <div id="about-info">
+            <p>Объединяем переводчиков, актёров, режиссёров и звукорежиссёров для работы!</p>
+            <p>Согласовываем произношение термины и характеры персонажей до начала записи</p>
+            <a href="#contacts">Обсудить проект</a>
+        </div>
+    </section>
+
 
     <section class="work-stages" id="work-stages">
         <h2 id="slider-title">От текста до готового звука</h2>
         <div class="slider">
             <ol class="slider-list">
                 <li>
+                    <img class="slide-image" src="assets/translation.jpg" alt="Перевод" loading="lazy">
                     <h3>Перевод</h3>
                     <p>Учитываем контекст и культурные особенности региона</p>
                 </li>
                 <li>
+                    <img class="slide-image" src="assets/recording.jpg" alt="Запись" loading="lazy">
                     <h3>Запись</h3>
                     <p>Подбираем актёров под голос персонажей и записываем речь с режиссёром дубляжа</p>
                 </li>
                 <li>
+                    <img class="slide-image" src="assets/sync.jpg" alt="Сведение и контроль" loading="lazy">
                     <h3>Сведение и контроль</h3>
                     <p>Проверяем синхронизацию, качество звука и соответствие тз</p>
                 </li>
             </ol>
             <div class="slider-btns">
-                <button class="slider-prev" type="button" alt="Предыдущий слайд"></button>
-                <button class="slider-next" type="button" alt="Следующий слайд"></button>
+                <button class="slider-prev" type="button" title="Предыдущий слайд"></button>
+                <button class="slider-next" type="button" title="Следующий слайд"></button>
             </div>
         </div>
     </section>
@@ -100,27 +114,27 @@
             </li>
         </ul>
     </section>
-
-    <section class="about" id="about">
-        <h2 id="about-title">О студии</h2>
-        <div id="about-info">
-            <p>Объединяем переводчиков, актёров, режиссёров и звукорежиссёров для работы!</p>
-            <p>Согласовываем произношение термины и характеры персонажей до начала записи</p>
-            <a href="#contacts">Обсудить проект</a>
-        </div>
-    </section>
     
     </main>
+
     <footer class="footer" id="contacts">
-        <address>
-            <a href="mailto:studio@vx.floppp">studio@vx.floppp</a>
-        </address>
-        <ul class="social-media">
-            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-            <li><a href="https://vk.com/" target="_blank" rel="noopener noreferrer">VK</a></li>
-        </ul>
-        <p>Дубляж, перевод и адаптация аудиовизуала.</p>
+        <div class="footer-info">
+            <div class="footer-contacts">
+                <a href="mailto:studio@vx.floppp">studio@vx.floppp</a>
+                <a href="tel:+71234567890">+7-123-456-78-90</a>
+            </div>
+            <ul class="social-media">
+                <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                <li><a href="https://vk.com/" target="_blank"">VK</a></li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2026 Dubbing Studio</p>
+            <a class="school-link" href="https://github.com/rolling-scopes-school/tasks/tree/master/fullstack-engineering/tasks/landing-page" target="_blank">
+                <img src="assets/rs_logo.svg" alt="RS School" width="100" loading="lazy">
+            </a>
+            <a class="github-link" href="https://github.com/mindvan" target="_blank"">GitHub / Mindvan</a>
+        </div>
     </footer>
-    <script src="scripts/slider.js" defer></script>
 </body>
 </html>

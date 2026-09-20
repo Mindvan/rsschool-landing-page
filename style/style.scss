@@ -1,13 +1,41 @@
+:root {
+    color-scheme: light;
+    --background: #f5f6fa;
+    --text: #252b38;
+    --accent: #345bd6;
+    --accent-hover: #2647b0;
+    --border: #dce0e9;
+    --button-border: #8993a5;
+    --button-hover: #e9edf9;
+    --muted: #596274;
+    --surface: #fff;
+    --on-accent: #fff;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --background: #141923;
+    --text: #edf1fa;
+    --accent: #a4b9ff;
+    --accent-hover: #c4d1ff;
+    --border: #394354;
+    --button-border: #78869e;
+    --button-hover: #303d56;
+    --muted: #b9c3d5;
+    --surface: #202938;
+    --on-accent: #141923;
+}
+
 // цвета
-$background: #f5f6fa;
-$text: #252b38;
-$accent: #345bd6;
-$accent-hover: #2647b0;
-$border: #dce0e9;
-$button-border: #cbd2e0;
-$button-hover: #e9edf9;
-$muted: #596274;
-$surface: #fff;
+$background: var(--background);
+$text: var(--text);
+$accent: var(--accent);
+$accent-hover: var(--accent-hover);
+$border: var(--border);
+$button-border: var(--button-border);
+$button-hover: var(--button-hover);
+$muted: var(--muted);
+$surface: var(--surface);
 
 //сброс
 *,
@@ -28,7 +56,7 @@ select {
     color: inherit;
 }
 
-.home-page {
+.site-page {
     background: $background;
     color: $text;
     font-family: Arial, sans-serif;
@@ -187,7 +215,7 @@ select {
         padding: 0.75rem 1.5rem;
         border-radius: 0.375rem;
         background: $accent;
-        color: $surface;
+        color: var(--on-accent);
         font-weight: 700;
 
         &:hover {
@@ -200,6 +228,10 @@ select {
     .about {
         padding: 3rem 0;
         border-top: 1px solid $border;
+    }
+
+    .about {
+        padding: 8rem 0;
     }
 
     h2 {
@@ -332,36 +364,215 @@ select {
         }
     }
 
-    .footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        padding: 2rem 0;
-        border-top: 1px solid $border;
-
-        > * {
-            margin: 0;
-            text-align: center;
-        }
-
-        .social-media {
-            display: flex;
-            gap: 1rem;
-        }
-
-        > p {
-            color: $muted;
-        }
-
-        > * + * {
-            padding-left: 1.5rem;
-            border-left: 1px solid $border;
-        }
-    }
-
     .social-media {
         display: flex;
         gap: 1.25rem;
     }
+}
+
+.site-page select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 0.25rem;
+}
+
+.site-page .theme-toggle {
+    flex-shrink: 0;
+    min-width: 9rem;
+}
+
+.catalog-page .main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.catalog-page .main > p {
+    margin-top: 1rem;
+    color: var(--muted);
+}
+
+.catalog-page .catalog {
+    margin-top: 3rem;
+}
+
+.catalog-page .catalog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-page .category-button,
+.catalog-page .show-more,
+.catalog-page .service-filter {
+    padding: 0.625rem 1.125rem;
+    border: 1px solid var(--button-border);
+    border-radius: 0.375rem;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.catalog-page .category-button:hover,
+.catalog-page .show-more:hover {
+    background: var(--button-hover);
+}
+
+.catalog-page .category-button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+}
+
+.catalog-page .service-filter {
+    margin: 0 0 1.5rem 0.75rem;
+}
+
+.catalog-page .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-page .project-card {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--surface);
+}
+
+.catalog-page .project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-page .project-card p {
+    color: var(--muted);
+    margin-top: 0.75rem;
+}
+
+.catalog-page .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.site-page {
+    section[id],
+    footer[id] {
+        scroll-margin-top: 1.5rem;
+    }
+
+    a,
+    button,
+    select {
+        transition: color 0.2s ease, background-color 0.2s ease,
+            border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a:hover {
+        color: var(--accent);
+    }
+
+    button:hover,
+    select:hover {
+        border-color: var(--accent);
+    }
+
+    .services-list li,
+    .slider-list li,
+    .project-card {
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            border-color: var(--accent);
+            box-shadow: inset 0 0 0 1px var(--accent);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .site-page {
+        a, button, select,
+        .services-list li, .slider-list li, .project-card {
+            transition: none;
+        }
+    }
+}
+.site-page .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .footer-contacts {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.25rem;
+    }
+
+    .footer-credits {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+
+        p {
+            justify-self: start;
+            color: var(--muted);
+            font-weight: 700;
+        }
+    }
+
+    .school-link {
+        justify-self: center;
+        display: inline-flex;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        background: transparent;
+
+        img {
+            display: block;
+            width: 3rem;
+            height: auto;
+        }
+    }
+
+    .github-link {
+        justify-self: end;
+        font-weight: 700;
+    }
+}
+
+:root[data-theme="dark"] .school-link img {
+    filter: invert(1);
 }
