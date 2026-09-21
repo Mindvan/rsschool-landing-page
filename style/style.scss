@@ -444,8 +444,11 @@ select {
 .catalog-page .project-card img {
     display: block;
     width: 100%;
-    height: 28rem;
-    aspect-ratio: auto;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center;
     border-radius: 0.25rem;
     margin-bottom: 1.5rem;
 }
@@ -577,17 +580,17 @@ html {
 }
 
 /* Адаптив главной страницы */
-.home-page .header,
-.home-page .main,
-.home-page .footer {
+.site-page .header,
+.site-page .main,
+.site-page .footer {
     min-width: 0;
 }
 
-.home-page h1 {
+.site-page h1 {
     font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
-.home-page h2 {
+.site-page h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
@@ -618,22 +621,17 @@ html {
     height: auto;
 }
 
-.home-page .footer-credits > * {
+.site-page .footer-credits > * {
     min-width: 0;
     overflow-wrap: anywhere;
 }
 
 @media (max-width: 64rem) {
-    .home-page .header {
+    .site-page .header {
         gap: 1rem;
     }
 
-    .home-page .nav-list {
-        gap: 1rem;
-        font-size: 0.75rem;
-    }
-
-    .home-page .theme-toggle {
+    .site-page .theme-toggle {
         min-width: 8rem;
         padding: 0.5rem 0.75rem;
     }
@@ -661,15 +659,15 @@ html {
 }
 
 @media (max-width: 48rem) {
-    .home-page .header {
+    .site-page .header {
         padding: 1rem 0;
     }
 
-    .home-page .nav {
+    .site-page .nav {
         display: none;
     }
 
-    .home-page .burger {
+    .site-page .burger {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -682,7 +680,7 @@ html {
         background: var(--surface);
     }
 
-    .home-page .burger::before {
+    .site-page .burger::before {
         content: '';
         width: 1.25rem;
         height: 2px;
@@ -690,7 +688,7 @@ html {
         box-shadow: 0 -0.5rem currentColor, 0 0.5rem currentColor;
     }
 
-    .home-page .burger:hover {
+    .site-page .burger:hover {
         background: var(--button-hover);
         border-color: var(--accent);
     }
@@ -709,39 +707,39 @@ html {
         padding: 3rem 0;
     }
 
-    .home-page .footer .footer-info {
+    .site-page .footer .footer-info {
         gap: 1rem;
     }
 
-    .home-page .footer .footer-contacts {
+    .site-page .footer .footer-contacts {
         flex-wrap: wrap;
         gap: 0.75rem 1rem;
     }
 
-    .home-page .footer .social-media {
+    .site-page .footer .social-media {
         gap: 1rem;
     }
 }
 
 @media (max-width: 36rem) {
-    .home-page .header {
+    .site-page .header {
         gap: 0.5rem;
     }
 
-    .home-page .logo {
+    .site-page .logo {
         gap: 0.5rem;
     }
 
-    .home-page .logo-mark {
+    .site-page .logo-mark {
         font-size: 2rem;
     }
 
-    .home-page .logo-caption {
+    .site-page .logo-caption {
         font-size: 0.75rem;
         letter-spacing: 0;
     }
 
-    .home-page .theme-toggle {
+    .site-page .theme-toggle {
         font-size: 0.75rem;
         min-width: 0;
         min-height: 2.75rem;
@@ -762,24 +760,23 @@ html {
         flex-basis: 100%;
     }
 
-    .home-page .footer .footer-info {
+    .site-page .footer .footer-info {
         flex-direction: column;
     }
 
-    .home-page .footer .footer-contacts {
+    .site-page .footer .footer-contacts {
         font-size: 0.75rem;
     }
 
-    .home-page .footer .social-media {
+    .site-page .footer .social-media {
         align-self: flex-end;
     }
 
-    .home-page .footer .footer-credits {
+    .site-page .footer .footer-credits {
         gap: 0.5rem;
         font-size: 0.75rem;
     }
 }
-
 .home-page .about {
     position: relative;
     isolation: isolate;
@@ -799,8 +796,6 @@ html {
         pointer-events: none;
     }
 }
-
-
 .site-page .footer .social-media {
     a {
         display: inline-flex;
@@ -821,5 +816,72 @@ html {
         width: 1.5rem;
         height: 1.5rem;
         flex-shrink: 0;
+    }
+}
+/* Адаптив каталога */
+.catalog-page {
+    .main {
+        padding-block: 3rem;
+    }
+
+    .catalog-categories {
+        flex-wrap: wrap;
+    }
+
+    .category-button,
+    .show-more {
+        min-height: 2.75rem;
+    }
+
+    .service-filter {
+        max-width: 100%;
+        min-height: 2.75rem;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-list > li,
+    .project-card {
+        min-width: 0;
+    }
+
+    .project-card {
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 64rem) {
+        .project-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 36rem) {
+        .main {
+            padding-block: 2.5rem;
+        }
+
+        .catalog {
+            margin-top: 2rem;
+        }
+
+        .catalog-categories {
+            gap: 0.5rem;
+        }
+
+        .service-filter {
+            display: block;
+            width: 100%;
+            margin: 0.5rem 0 1.5rem;
+        }
+
+        .project-list {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .show-more {
+            width: 100%;
+        }
     }
 }
