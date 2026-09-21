@@ -13,8 +13,6 @@ function applyTheme(theme) {
     themeRoot.dataset.theme = theme;
     document.querySelectorAll('.theme-toggle').forEach((button) => {
         const dark = theme === 'dark';
-        button.textContent = dark ? 'Светлая тема' : 'Тёмная тема';
-        button.setAttribute('aria-label', 'Тёмная тема');
         button.setAttribute('aria-pressed', String(dark));
         button.title = dark ? 'Вкл. светлую тему' : 'Вкл. тёмную тему';
     });
