@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="scripts/themeSwitch.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши проекты</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="scripts/slider.js" defer></script>
+</head>
+<body class="site-page catalog-page">
+    <header class="header">
+        <a class="logo" href="index.html"><span class="logo-mark">DS<span>.</span></span><span class="logo-caption">DUBBING<br>STUDIO</span></a>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html#about">О студии</a></li>
+                <li><a href="index.html#services">Услуги</a></li>
+                <li><a href="catalog.html">Проекты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" type="button">Сменить тему</button>
+        <button class="burger" type="button" aria-label="Открыть меню"></button>
+    </header>
+    <main class="main">
+        <h1>Проекты</h1>
+        <p>Каталог проетков, которыми мы занимались.</p>
+        <section class="catalog" id="catalog">
+            <h2 id="catalog-title">Проекты студии</h2>
+            <div class="catalog-categories">
+                <button class="category-button" type="button">Все</button>
+                <button class="category-button active" type="button">Анимация</button>
+                <button class="category-button" type="button">Фильмы</button>
+                <button class="category-button" type="button">Сериалы</button>
+                <button class="category-button" type="button">Игры</button>
+                <button class="category-button" type="button">Реклама</button>
+            </div>
+            <label for="service">Услуга</label>
+            <select class="service-filter" id="service" name="service">
+                <option value="all">Все услуги</option>
+                <option value="dubbing">Дубляж</option>
+                <option value="single-voice">Одноголосый закадр</option>
+                <option value="two-voice">Двухголосый закадр</option>
+                <option value="multi-voice">Многоголосый закадр</option>
+                <option value="subtitling">Субтитры</option>
+            </select>
+            <h3>Анимация</h3>
+            <ul class="project-list">
+                <li>
+                    <article class="project-card">
+                        <img src="assets/gf.webp" alt="Обложка проекта «Гравити Фолз»" width="320" height="180" loading="lazy">
+                        <h3>Гравити Фолз</h3>
+                        <p>Близнецы проводят каникулы у странного прадядюшки. Тайны и аномалии в захватывающем мультсериале Алекса Хирша</p>
+                        <p>Дубляж | Анимация | США</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/arc.webp" alt="Обложка проекта «Аркейн»">
+                        <h3>Аркейн</h3>
+                        <p>Военный конфликт двух городов разлучает родных сестёр. Анимационный хит по вселенной игры League of Legends</p>
+                        <p>Дубляж | Анимация | США, Франция</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/rm.webp" alt="Обложка проекта «Рик и Морти»">
+                        <h3>Рик и Морти</h3>
+                        <p>Гениальный ученый втягивает внука в безумные авантюры. Выдающийся анимационный сериал Дэна Хармона</p>
+                        <p>Двухголосый закадр | Анимация | США</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/lbcn.webp" alt="Обложка проекта «Леди Баг и Супер-Кот»">
+                        <h3>Леди Баг и Супер-Кот</h3>
+                        <p>Влюбленные подростки-супергерои спасают Париж. Самый романтичный мультсериал о борьбе добра со злом</p>
+                        <p>Дубляж | Анимация | Франция</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/inv.webp" alt="Обложка проекта «Непобедимый»">
+                        <h3>Непобедимый</h3>
+                        <p>Подросток со сверхсилой доказывает, что он не хуже своего отца-супергероя. Анимация по культовому комиксу</p>
+                        <p>Многоголосый закадр | Анимация | США</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/mm.webp" alt="Обложка проекта «Микки Маус»">
+                        <h3>Микки Маус</h3>
+                        <p>Как спасти тонущий корабль или тайно провезти пса в поезде? Короткие приключения легендарного мышонка</p>
+                        <p>Дубляж | Анимация | США</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/smesh.webp" alt="Обложка проекта «Смешарики»">
+                        <h3>Смешарики</h3>
+                        <p>Лось-ученый, свинка-кокетка и другие круглые герои живут в уютном мире. Смешные и умные истории для всей семьи</p>
+                        <p>Субтитры | Анимация | Россия</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/fut.webp" alt="Обложка проекта «Футурама»">
+                        <h3>Футурама</h3>
+                        <p>Курьер-лузер переносится в XXXI век и учится жить в мире космолетов и роботов. Сатира от авторов «Симпсонов»</p>
+                        <p>Одноголосый закадр | Анимация | США</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card">
+                        <img src="assets/simp.webp" alt="Обложка проекта «Симпсоны»">
+                        <h3>Симпсоны</h3>
+                        <p>Пародия на жизнь простой американской семьи. Самый длинный мультсериал из США, не раз предсказавший будущее</p>
+                        <p>США | Fox</p>
+                        <p>Многоголосый закадр | Анимация | США</p>
+                    </article>
+                </li>
+            </ul>
+            <button class="show-more" type="button">Показать ещё</button>
+        </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="footer-info">
+            <div class="footer-contacts">
+                <a href="mailto:studio@dc.floppp">studio@dc.floppp</a>
+                <a href="tel:+71234567890">+7-123-456-78-90</a>
+            </div>
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.001 461.001" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vk.com/" target="_blank" title="VK">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M440.649,295.361c16.984,16.582,34.909,32.182,50.142,50.436 c6.729,8.112,13.099,16.482,17.973,25.896c6.906,13.382,0.651,28.108-11.348,28.907l-74.59-0.034 c-19.238,1.596-34.585-6.148-47.489-19.302c-10.327-10.519-19.891-21.714-29.821-32.588c-4.071-4.444-8.332-8.626-13.422-11.932 c-10.182-6.609-19.021-4.586-24.84,6.034c-5.926,10.802-7.271,22.762-7.853,34.8c-0.799,17.564-6.108,22.182-23.751,22.986 c-37.705,1.778-73.489-3.926-106.732-22.947c-29.308-16.768-52.034-40.441-71.816-67.24 C58.589,258.194,29.094,200.852,2.586,141.904c-5.967-13.281-1.603-20.41,13.051-20.663c24.333-0.473,48.663-0.439,73.025-0.034 c9.89,0.145,16.437,5.817,20.256,15.16c13.165,32.371,29.274,63.169,49.494,91.716c5.385,7.6,10.876,15.201,18.694,20.55 c8.65,5.923,15.236,3.96,19.305-5.676c2.582-6.11,3.713-12.691,4.295-19.234c1.928-22.513,2.182-44.988-1.199-67.422 c-2.076-14.001-9.962-23.065-23.933-25.714c-7.129-1.351-6.068-4.004-2.616-8.073c5.995-7.018,11.634-11.387,22.875-11.387h84.298 c13.271,2.619,16.218,8.581,18.035,21.934l0.072,93.637c-0.145,5.169,2.582,20.51,11.893,23.931 c7.452,2.436,12.364-3.526,16.836-8.251c20.183-21.421,34.588-46.737,47.457-72.951c5.711-11.527,10.622-23.497,15.381-35.458 c3.526-8.875,9.059-13.242,19.056-13.049l81.132,0.072c2.406,0,4.84,0.035,7.17,0.434c13.671,2.33,17.418,8.211,13.195,21.561 c-6.653,20.945-19.598,38.4-32.255,55.935c-13.53,18.721-28.001,36.802-41.418,55.634 C424.357,271.756,425.336,280.424,440.649,295.361L440.649,295.361z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/" target="_blank" title="Telegram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M14.9932 1.58221C15.0223 1.40736 14.9567 1.23016 14.8208 1.11645C14.6848 1.00274 14.4988 0.969519 14.3318 1.02914L0.331836 6.02914C0.143209 6.0965 0.0129867 6.26994 0.000913704 6.46987C-0.0111592 6.6698 0.0972469 6.85765 0.276398 6.94722L4.2764 8.94722C4.43688 9.02746 4.62806 9.01556 4.77735 8.91603L8.09775 6.70244L6.10957 9.18766C6.02203 9.29709 5.98442 9.43824 6.00592 9.57672C6.02742 9.7152 6.10605 9.8383 6.22265 9.91603L12.2227 13.916C12.3638 14.0101 12.5431 14.0262 12.6988 13.9588C12.8545 13.8914 12.9653 13.7496 12.9932 13.5822L14.9932 1.58221Z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2026 Dubbing Studio</p>
+            <a class="school-link" href="https://github.com/rolling-scopes-school/tasks/blob/master/fullstack-engineering/README.md" target="_blank">
+                <img src="assets/rs_logo.png" alt="RS School" width="100" loading="lazy">
+            </a>
+            <a class="github-link" href="https://github.com/mindvan" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

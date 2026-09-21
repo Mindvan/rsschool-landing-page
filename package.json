@@ -1,0 +1,24 @@
+{
+  "name": "rs2026",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000r\u0000s\u0000s\u0000c\u0000h\u0000o\u0000o\u0000l\u0000-\u0000l\u0000a\u0000n\u0000d\u0000i\u0000n\u0000g\u0000-\u0000p\u0000a\u0000g\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass style/style.scss style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mindvan/rsschool-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mindvan/rsschool-landing-page/issues"
+  },
+  "homepage": "https://github.com/Mindvan/rsschool-landing-page#readme",
+  "devDependencies": {
+    "sass": "^1.104.1"
+  }
+}
