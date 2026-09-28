@@ -167,7 +167,7 @@
                     <article class="project-card">
                         <img src="assets/deiroit.jpg" alt="Detroit: Become Human" loading="lazy">
                         <h3>Detroit: Become Human</h3>
-                        <p>Действие игры происходит в Детройте в недалёком будущем, где существуют серийно выпускаемые андроиды — роботы-слуги, почти неотличимые от людей</p>
+                        <p>Действие игры происходит в Детройте в недалёком будущем, где существуют серийно выпускаемые андроиды - роботы-слуги, почти неотличимые от людей</p>
                         <p>Дубляж | Игры | Франция</p>
                     </article>
                 </li>
@@ -190,6 +190,26 @@
             <div class="project-modal-info">
                 <h2 id="project-modal-title"></h2>
                 <div class="project-modal-description"></div>
+                <div class="project-options">
+                    <fieldset>
+                        <legend>Тип локализации</legend>
+                        <div class="localization-options"></div>
+                    </fieldset>
+                    <fieldset>
+                        <legend id="quantity-label">Эпизодов</legend>
+                        <div class="quantity-options">
+                            <label><input type="radio" name="project-quantity" value="1" checked><span>1</span></label>
+                            <label><input type="radio" name="project-quantity" value="2"><span>2</span></label>
+                            <label><input type="radio" name="project-quantity" value="3"><span>3</span></label>
+                            <label><input type="radio" name="project-quantity" value="6"><span>6</span></label>
+                            <label><input type="radio" name="project-quantity" value="10"><span>10</span></label>
+                            <label><input type="radio" name="project-quantity" value="13"><span>13</span></label>
+                            <label><input type="radio" name="project-quantity" value="20"><span>20</span></label>
+                            <label><input type="radio" name="project-quantity" value="26"><span>26</span></label>
+                        </div>
+                    </fieldset>
+                    <p class="project-selection" role="status" aria-live="polite"></p>
+                </div>
             </div>
         </div>
     </dialog>
