@@ -596,7 +596,7 @@ html {
     padding: 4rem 0;
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .site-page .header {
     padding: 1rem 0;
   }
@@ -780,6 +780,84 @@ html {
   }
   .catalog-page .show-more {
     width: 100%;
+  }
+}
+
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+@media (max-width: 768px) {
+  .site-page .header {
+    position: relative;
+    z-index: 10;
+    background: var(--background);
+  }
+  .site-page .nav {
+    display: block;
+    position: fixed;
+    inset: var(--menu-top, 76px) 0 0;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--background);
+    border-top: 1px solid var(--border);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-1rem);
+    pointer-events: none;
+    transition: opacity 250ms ease, transform 250ms ease, visibility 250ms;
+  }
+  .site-page .nav-list {
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  .site-page .nav a {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--surface);
+    font-size: 1.25rem;
+  }
+  .site-page .burger {
+    position: relative;
+  }
+  .site-page .burger::before,
+.site-page .burger::after {
+    content: "";
+    position: absolute;
+    width: 1.25rem;
+    height: 2px;
+    background: currentColor;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+  }
+  .site-page .burger::after {
+    transform: scaleX(0);
+  }
+  .menu-open .site-page .nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .menu-open .site-page .burger::before {
+    box-shadow: 0 0 currentColor, 0 0 currentColor;
+    transform: rotate(45deg);
+  }
+  .menu-open .site-page .burger::after {
+    transform: rotate(-45deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-page .nav,
+.site-page .burger::before,
+.site-page .burger::after {
+    transition: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
