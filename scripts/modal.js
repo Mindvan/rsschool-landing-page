@@ -8,92 +8,68 @@ const projectOptions = projectModal.querySelector('.project-options');
 const localizationOptions = projectModal.querySelector('.localization-options');
 const quantityLabel = projectModal.querySelector('#quantity-label');
 const selectionSummary = projectModal.querySelector('.project-selection');
-const localizationTypes = ['Дубляж', 'Одноголосый закадр', 'Двухголосый закадр', 'Многоголосый закадр', 'Субтитры'];
-// Демонстрационные тарифы в рублях за одну выбранную единицу.
-const localizationRates = {
-    'Дубляж': 15000,
-    'Одноголосый закадр': 5000,
-    'Двухголосый закадр': 8000,
-    'Многоголосый закадр': 11000,
-    'Субтитры': 2000
-};
-const priceFormatter = new Intl.NumberFormat('ru-RU', {
-    style: 'currency', currency: 'RUB', maximumFractionDigits: 0
-});
+let selectedProject = null;
 
 function updateProjectSelection() {
-    const type = projectOptions.querySelector('[name="project-localization"]:checked').value;
+    const typeId = projectOptions.querySelector('[name="project-localization"]:checked').value;
     const quantity = Number(projectOptions.querySelector('[name="project-quantity"]:checked').value);
-    const rate = localizationRates[type];
+    const type = selectedProject.parameters.localization.find((option) => option.id === typeId);
+    const formatter = new Intl.NumberFormat('ru-RU', {
+        style: 'currency', currency: selectedProject.currency, maximumFractionDigits: 0
+    });
     const description = document.createElement('span');
-    description.textContent = `${modalTitle.textContent} - ${type}. ${quantityLabel.textContent}: ${quantity}.`;
+    description.textContent = `${selectedProject.title} - ${type.label}. ${selectedProject.parameters.quantity.label}: ${quantity}.`;
     const calculation = document.createElement('span');
     calculation.className = 'project-price-calculation';
-    calculation.textContent = `${priceFormatter.format(rate)} * ${quantity}`;
+    calculation.textContent = `${formatter.format(type.price)} * ${quantity}`;
     const total = document.createElement('strong');
     total.className = 'project-price-total';
-    total.textContent = `Итого: ${priceFormatter.format(rate * quantity)}`;
+    total.textContent = `Итого: ${formatter.format(type.price * quantity)}`;
     selectionSummary.replaceChildren(description, calculation, total);
 }
 
-function resetProjectOptions(card) {
-    const category = card.closest('[data-category]').dataset.category;
-    quantityLabel.textContent = category === 'advertising' ? 'Кол-во роликов'
-        : category === 'games' ? 'Кол-во фрагментов'
-        : category === 'films' ? 'Кол-во частей' : 'Кол-во эпизодов';
-    const metadata = Array.from(card.querySelectorAll('p'), (p) => p.textContent.split('|')[0].trim());
-    const initialType = localizationTypes.find((type) => metadata.includes(type)) || localizationTypes[0];
-    localizationOptions.replaceChildren(...localizationTypes.map((type) => {
-        const label = document.createElement('label');
-        const input = document.createElement('input');
-        input.type = 'radio';
-        input.name = 'project-localization';
-        input.value = type;
-        input.checked = type === initialType;
-        const text = document.createElement('span');
-        text.textContent = type;
-        label.append(input, text);
-        return label;
-    }));
-    projectOptions.querySelector('[name="project-quantity"][value="1"]').checked = true;
+function createOption(name, value, caption, checked) {
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = name;
+    input.value = value;
+    input.checked = checked;
+    const text = document.createElement('span');
+    text.textContent = caption;
+    label.append(input, text);
+    return label;
+}
+
+function resetProjectOptions(project) {
+    const parameters = project.parameters;
+    quantityLabel.textContent = parameters.quantity.label;
+    localizationOptions.replaceChildren(...parameters.localization.map((option) =>
+        createOption('project-localization', option.id, option.label, option.id === parameters.defaultLocalization)));
+    projectOptions.querySelector('.quantity-options').replaceChildren(...parameters.quantity.values.map((value) =>
+        createOption('project-quantity', value, value, value === parameters.quantity.default)));
     updateProjectSelection();
 }
 
 projectOptions.addEventListener('change', updateProjectSelection);
 
-function openProjectModal(card) {
+function openProjectModal(project, card) {
     if (projectModal.open) return;
-    const image = card.querySelector('img');
-    modalImage.hidden = !image;
-    if (image) {
-        modalImage.src = image.getAttribute('src');
-        modalImage.alt = image.alt;
-    } else {
-        modalImage.removeAttribute('src');
-        modalImage.alt = '';
-    }
-    modalTitle.textContent = card.querySelector('h3').textContent;
-    modalDescription.replaceChildren(...Array.from(card.querySelectorAll('p'), (paragraph) => paragraph.cloneNode(true)));
+    selectedProject = project;
+    modalImage.src = project.image;
+    modalImage.alt = project.title;
+    modalTitle.textContent = project.title;
+    modalDescription.replaceChildren(...[project.description, ...project.details].filter(Boolean).map((text) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        return paragraph;
+    }));
     modalTrigger = card;
-    resetProjectOptions(card);
+    resetProjectOptions(project);
     projectModal.showModal();
+    projectModal.scrollTop = 0;
     document.documentElement.classList.add('modal-open');
 }
-
-document.querySelectorAll('.project-card').forEach((card) => {
-    card.tabIndex = 0;
-    card.setAttribute('role', 'button');
-    card.setAttribute('aria-haspopup', 'dialog');
-    card.setAttribute('aria-label', `Подробнее: ${card.querySelector('h3').textContent}`);
-    card.addEventListener('click', () => openProjectModal(card));
-    card.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            openProjectModal(card);
-        }
-    });
-});
-
 projectModal.querySelector('.project-modal-close').addEventListener('click', () => projectModal.close());
 
 function isOutsidePanel(event) {
@@ -110,7 +86,6 @@ projectModal.addEventListener('click', (event) => {
     pointerStartedOutside = false;
 });
 
-// Escape closes the native dialog and triggers the same cleanup.
 projectModal.addEventListener('close', () => {
     document.documentElement.classList.remove('modal-open');
     modalTrigger?.focus({ preventScroll: true });

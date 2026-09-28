@@ -1,0 +1,883 @@
+[
+    {
+        "id":  "gf",
+        "category":  "animation",
+        "title":  "Гравити Фолз",
+        "description":  "Близнецы проводят каникулы у странного прадядюшки. Тайны и аномалии в захватывающем мультсериале Алекса Хирша",
+        "details":  [
+                        "Дубляж | Анимация | США"
+                    ],
+        "image":  "assets/gf.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "arc",
+        "category":  "animation",
+        "title":  "Аркейн",
+        "description":  "Военный конфликт двух городов разлучает родных сестёр. Анимационный хит по вселенной игры League of Legends",
+        "details":  [
+                        "Дубляж | Анимация | США, Франция"
+                    ],
+        "image":  "assets/arc.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "rm",
+        "category":  "animation",
+        "title":  "Рик и Морти",
+        "description":  "Гениальный ученый втягивает внука в безумные авантюры. Выдающийся анимационный сериал Дэна Хармона",
+        "details":  [
+                        "Двухголосый закадр | Анимация | США"
+                    ],
+        "image":  "assets/rm.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "two-voice",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "lbcn",
+        "category":  "animation",
+        "title":  "Леди Баг и Супер-Кот",
+        "description":  "Влюбленные подростки-супергерои спасают Париж. Самый романтичный мультсериал о борьбе добра со злом",
+        "details":  [
+                        "Дубляж | Анимация | Франция"
+                    ],
+        "image":  "assets/lbcn.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "inv",
+        "category":  "animation",
+        "title":  "Непобедимый",
+        "description":  "Подросток со сверхсилой доказывает, что он не хуже своего отца-супергероя. Анимация по культовому комиксу",
+        "details":  [
+                        "Многоголосый закадр | Анимация | США"
+                    ],
+        "image":  "assets/inv.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "multi-voice",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "mm",
+        "category":  "animation",
+        "title":  "Микки Маус",
+        "description":  "Как спасти тонущий корабль или тайно провезти пса в поезде? Короткие приключения легендарного мышонка",
+        "details":  [
+                        "Дубляж | Анимация | США"
+                    ],
+        "image":  "assets/mm.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "smesh",
+        "category":  "animation",
+        "title":  "Смешарики",
+        "description":  "Лось-ученый, свинка-кокетка и другие круглые герои живут в уютном мире. Смешные и умные истории для всей семьи",
+        "details":  [
+                        "Субтитры | Анимация | Россия"
+                    ],
+        "image":  "assets/smesh.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "subtitling",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "fut",
+        "category":  "animation",
+        "title":  "Футурама",
+        "description":  "Курьер-лузер переносится в XXXI век и учится жить в мире космолетов и роботов. Сатира от авторов «Симпсонов»",
+        "details":  [
+                        "Одноголосый закадр | Анимация | США"
+                    ],
+        "image":  "assets/fut.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "single-voice",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "simp",
+        "category":  "animation",
+        "title":  "Симпсоны",
+        "description":  "Пародия на жизнь простой американской семьи. Самый длинный мультсериал из США, не раз предсказавший будущее",
+        "details":  [
+                        "США | Fox",
+                        "Многоголосый закадр | Анимация | США"
+                    ],
+        "image":  "assets/simp.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "multi-voice",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "shawshank",
+        "category":  "films",
+        "title":  "Побег из Шоушенка",
+        "description":  "Несправедливо осужденный банкир готовит побег из тюрьмы. Тим Роббинс в выдающейся экранизации Стивена Кинга",
+        "details":  [
+                        "Многолосый закадр | Фильмы | США"
+                    ],
+        "image":  "assets/shawshank.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во частей",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "gentleman",
+        "category":  "films",
+        "title":  "Джентльмены",
+        "description":  "Гангстеры всех мастей делят нелегальный бизнес. Закрученная экшен-комедия Гая Ричи с Мэттью Макконахи",
+        "details":  [
+                        "Дубляж | Фильмы | США"
+                    ],
+        "image":  "assets/gentleman.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во частей",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "thrones",
+        "category":  "series",
+        "title":  "Игра престолов",
+        "description":  "Рыцари, мертвецы и драконы в эпической битве за судьбы мира. Фэнтези HBO, которое навсегда изменило телевидение",
+        "details":  [
+                        "Дубляж | Сериалы | США"
+                    ],
+        "image":  "assets/thrones.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "sheldon",
+        "category":  "series",
+        "title":  "Детство Шелдона",
+        "description":  "Юный вундеркинд поступает в среднюю школу. Спин-офф «Теории большого взрыва» о ранних годах Шелдона Купера",
+        "details":  [
+                        "Дубляж | Сериалы | США"
+                    ],
+        "image":  "assets/sheldon.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "breakingbad",
+        "category":  "series",
+        "title":  "Во все тяжкие",
+        "description":  "Умирающий учитель химии начинает варить мет ради благополучия семьи. Выдающийся драматический сериал 2010-х",
+        "details":  [
+                        "Дубляж | Сериалы | США"
+                    ],
+        "image":  "assets/breakingbad.webp",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во эпизодов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "deiroit",
+        "category":  "games",
+        "title":  "Detroit: Become Human",
+        "description":  "Действие игры происходит в Детройте в недалёком будущем, где существуют серийно выпускаемые андроиды — роботы-слуги, почти неотличимые от людей",
+        "details":  [
+                        "Дубляж | Игры | Франция"
+                    ],
+        "image":  "assets/deiroit.jpg",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во фрагментов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    },
+    {
+        "id":  "mms",
+        "category":  "advertising",
+        "title":  "Культовая новогодняя реклама M\u0026M\u0027s",
+        "description":  "",
+        "details":  [
+                        "Дубляж | Реклама | США"
+                    ],
+        "image":  "assets/mms.jpg",
+        "parameters":  {
+                           "localization":  [
+                                                {
+                                                    "id":  "dubbing",
+                                                    "label":  "Дубляж",
+                                                    "price":  15000
+                                                },
+                                                {
+                                                    "id":  "single-voice",
+                                                    "label":  "Одноголосый закадр",
+                                                    "price":  5000
+                                                },
+                                                {
+                                                    "id":  "two-voice",
+                                                    "label":  "Двухголосый закадр",
+                                                    "price":  8000
+                                                },
+                                                {
+                                                    "id":  "multi-voice",
+                                                    "label":  "Многоголосый закадр",
+                                                    "price":  11000
+                                                },
+                                                {
+                                                    "id":  "subtitling",
+                                                    "label":  "Субтитры",
+                                                    "price":  2000
+                                                }
+                                            ],
+                           "defaultLocalization":  "dubbing",
+                           "quantity":  {
+                                            "label":  "Кол-во роликов",
+                                            "values":  [
+                                                           1,
+                                                           2,
+                                                           3,
+                                                           6,
+                                                           10,
+                                                           13,
+                                                           20,
+                                                           26
+                                                       ],
+                                            "default":  1
+                                        }
+                       },
+        "currency":  "RUB"
+    }
+]
