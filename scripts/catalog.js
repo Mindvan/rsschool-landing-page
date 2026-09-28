@@ -107,7 +107,7 @@ async function loadCatalog() {
         projectList.replaceChildren(fragment);
         projectItems = projectList.querySelectorAll(':scope > li');
         catalogLoaded = true;
-        emptyCategory.textContent = 'В этой категории пока нет проектов.';
+        emptyCategory.textContent = 'В этой категории пока нет проектов';
         renderCards();
     } catch (error) {
         emptyCategory.textContent = 'Не удалось загрузить проекты. Обновите страницу';
