@@ -8,20 +8,23 @@
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <script src="scripts/slider.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/catalog.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
 </head>
 <body class="site-page catalog-page">
     <header class="header">
         <a class="logo" href="index.html"><span class="logo-mark">DS<span>.</span></span><span class="logo-caption">DUBBING<br>STUDIO</span></a>
-        <nav class="nav">
+        <nav class="nav" id="main-nav">
             <ul class="nav-list">
                 <li><a href="index.html#about">О студии</a></li>
                 <li><a href="index.html#services">Услуги</a></li>
                 <li><a href="catalog.html">Проекты</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
             </ul>
         </nav>
         <button class="theme-toggle" type="button">Сменить тему</button>
-        <button class="burger" type="button" aria-label="Открыть меню"></button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-controls="main-nav" aria-expanded="false"></button>
     </header>
     <main class="main">
         <h1>Проекты</h1>
@@ -29,12 +32,12 @@
         <section class="catalog" id="catalog">
             <h2 id="catalog-title">Проекты студии</h2>
             <div class="catalog-categories">
-                <button class="category-button" type="button">Все</button>
-                <button class="category-button active" type="button">Анимация</button>
-                <button class="category-button" type="button">Фильмы</button>
-                <button class="category-button" type="button">Сериалы</button>
-                <button class="category-button" type="button">Игры</button>
-                <button class="category-button" type="button">Реклама</button>
+                <button class="category-button active" type="button" data-category="all" aria-pressed="true">Все</button>
+                <button class="category-button" type="button" data-category="animation" aria-pressed="false">Анимация</button>
+                <button class="category-button" type="button" data-category="films" aria-pressed="false">Фильмы</button>
+                <button class="category-button" type="button" data-category="series" aria-pressed="false">Сериалы</button>
+                <button class="category-button" type="button" data-category="games" aria-pressed="false">Игры</button>
+                <button class="category-button" type="button" data-category="advertising" aria-pressed="false">Реклама</button>
             </div>
             <label for="service">Услуга</label>
             <select class="service-filter" id="service" name="service">
@@ -45,85 +48,33 @@
                 <option value="multi-voice">Многоголосый закадр</option>
                 <option value="subtitling">Субтитры</option>
             </select>
-            <h3>Анимация</h3>
-            <ul class="project-list">
-                <li>
-                    <article class="project-card">
-                        <img src="assets/gf.webp" alt="Обложка проекта «Гравити Фолз»" width="320" height="180" loading="lazy">
-                        <h3>Гравити Фолз</h3>
-                        <p>Близнецы проводят каникулы у странного прадядюшки. Тайны и аномалии в захватывающем мультсериале Алекса Хирша</p>
-                        <p>Дубляж | Анимация | США</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/arc.webp" alt="Обложка проекта «Аркейн»">
-                        <h3>Аркейн</h3>
-                        <p>Военный конфликт двух городов разлучает родных сестёр. Анимационный хит по вселенной игры League of Legends</p>
-                        <p>Дубляж | Анимация | США, Франция</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/rm.webp" alt="Обложка проекта «Рик и Морти»">
-                        <h3>Рик и Морти</h3>
-                        <p>Гениальный ученый втягивает внука в безумные авантюры. Выдающийся анимационный сериал Дэна Хармона</p>
-                        <p>Двухголосый закадр | Анимация | США</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/lbcn.webp" alt="Обложка проекта «Леди Баг и Супер-Кот»">
-                        <h3>Леди Баг и Супер-Кот</h3>
-                        <p>Влюбленные подростки-супергерои спасают Париж. Самый романтичный мультсериал о борьбе добра со злом</p>
-                        <p>Дубляж | Анимация | Франция</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/inv.webp" alt="Обложка проекта «Непобедимый»">
-                        <h3>Непобедимый</h3>
-                        <p>Подросток со сверхсилой доказывает, что он не хуже своего отца-супергероя. Анимация по культовому комиксу</p>
-                        <p>Многоголосый закадр | Анимация | США</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/mm.webp" alt="Обложка проекта «Микки Маус»">
-                        <h3>Микки Маус</h3>
-                        <p>Как спасти тонущий корабль или тайно провезти пса в поезде? Короткие приключения легендарного мышонка</p>
-                        <p>Дубляж | Анимация | США</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/smesh.webp" alt="Обложка проекта «Смешарики»">
-                        <h3>Смешарики</h3>
-                        <p>Лось-ученый, свинка-кокетка и другие круглые герои живут в уютном мире. Смешные и умные истории для всей семьи</p>
-                        <p>Субтитры | Анимация | Россия</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/fut.webp" alt="Обложка проекта «Футурама»">
-                        <h3>Футурама</h3>
-                        <p>Курьер-лузер переносится в XXXI век и учится жить в мире космолетов и роботов. Сатира от авторов «Симпсонов»</p>
-                        <p>Одноголосый закадр | Анимация | США</p>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
-                        <img src="assets/simp.webp" alt="Обложка проекта «Симпсоны»">
-                        <h3>Симпсоны</h3>
-                        <p>Пародия на жизнь простой американской семьи. Самый длинный мультсериал из США, не раз предсказавший будущее</p>
-                        <p>США | Fox</p>
-                        <p>Многоголосый закадр | Анимация | США</p>
-                    </article>
-                </li>
-            </ul>
-            <button class="show-more" type="button">Показать ещё</button>
+            <h3 id="category-title" aria-live="polite">Все</h3>
+            <ul class="project-list" aria-busy="true"></ul>
+            <p class="catalog-empty" role="status" hidden>В этой категории пока нет проектов.</p>
+            <button class="show-more" type="button" hidden>Показать ещё</button>
         </section>
     </main>
+    <dialog class="project-modal" aria-labelledby="project-modal-title">
+        <div class="project-modal-panel">
+            <button class="project-modal-close" type="button" aria-label="Закрыть окно" autofocus>×</button>
+            <img class="project-modal-image" alt="">
+            <div class="project-modal-info">
+                <h2 id="project-modal-title"></h2>
+                <div class="project-modal-description"></div>
+                <div class="project-options">
+                    <fieldset>
+                        <legend>Тип локализации</legend>
+                        <div class="localization-options"></div>
+                    </fieldset>
+                    <fieldset>
+                        <legend id="quantity-label">Эпизодов</legend>
+                        <div class="quantity-options"></div>
+                    </fieldset>
+                    <p class="project-selection" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+    </dialog>
 
     <footer class="footer" id="contacts">
         <div class="footer-info">

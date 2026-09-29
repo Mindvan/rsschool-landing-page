@@ -4,6 +4,10 @@ document.querySelectorAll('.slider').forEach(function(slider) {
     const next = slider.querySelector('.slider-next');
 
     let moving = false;
+    let activeAnimation = null;
+    new ResizeObserver(() => {
+        if (activeAnimation) activeAnimation.finish();
+    }).observe(slider.querySelector('.slider-window'));
 
     function moveSlider(direction) {
         if (moving) return;
@@ -37,12 +41,14 @@ document.querySelectorAll('.slider').forEach(function(slider) {
                 { transform: end }
             ],
             {
-                duration: 550,
+                duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 550,
                 easing: 'ease'
             }
         );
 
+        activeAnimation = animation;
         animation.onfinish = function() {
+            activeAnimation = null;
             // вправо - переносим карточку в конец
             if (direction === 1) {
                 track.append(track.firstElementChild);
